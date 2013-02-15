@@ -28,7 +28,6 @@ setup(name='hoka.script.poupload',
       include_package_data=True,
       install_requires=[
         'setuptools',
-        'Zope2',
         'z3c.autoinclude',
       ],
       extras_require={'test': [
