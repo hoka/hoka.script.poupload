@@ -14,7 +14,7 @@ The content of file should looks like the following example.
 
 Code::
 
-    [default]
+    [poupload]
     name=MYLOGINNAME TO PO SERVER
     password=MY PO SERVER PASSWORD
     url=PO SERVER URL/@@poin/upload'

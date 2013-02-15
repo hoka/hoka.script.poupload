@@ -32,7 +32,7 @@ class Handler:
 
         parser = SafeConfigParser()
         parser.read((expanduser('~/.thepofiles')))
-        main_section = 'default'
+        main_section = 'poupload'
 
         self.name = parser.get(main_section, 'name', '')
         self.password = parser.get(main_section, 'password', '')
