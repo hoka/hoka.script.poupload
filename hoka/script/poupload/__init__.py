@@ -55,7 +55,7 @@ class Handler:
 
         path=str(self.args.path)
         if not os.path.exists(path):
-            self.logger.error('Path value doess not exist. PATH="%s"'%path)
+            self.logger.error('Path value does not exist. PATH="%s"'%path)
             return
 
         self._collect_pos()
