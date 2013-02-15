@@ -2,10 +2,10 @@ import argparse
 import os
 import sys
 import logging
-logger = logging.getLogger('poupload')
-logger.setLevel(logging.DEBUG)#
 
-import MultipartPostHandler, urllib2, cookielib
+import urllib2
+import cookielib
+from posthandler import MultipartPostHandler
 
 from os.path import abspath, join, expanduser, exists, isfile
 from ConfigParser import SafeConfigParser
@@ -18,6 +18,10 @@ parser.add_argument('--path',
                             You can input a po file location or
                             a single po flie for uploading.
                             Example: '/MY_PO_FILES_DIRECTORY/my.po' or /MY_PO_FILES_DIRECTORY""")
+
+logger = logging.getLogger('poupload')
+logger.setLevel(logging.DEBUG)#
+
 
 class Handler:
     def __init__(self,args):
@@ -95,7 +99,7 @@ class Handler:
     def _create_opener(self):
         """ """
         cookies = cookielib.CookieJar()
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookies),MultipartPostHandler.MultipartPostHandler)
+        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookies),MultipartPostHandler)
         return  opener
 
 def main(args=None):
