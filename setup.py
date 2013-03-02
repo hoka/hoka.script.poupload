@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '2.13.19.1'
+version = '0.0.0.1'
 
 setup(name='hoka.script.poupload',
       version=version,
@@ -24,11 +24,12 @@ setup(name='hoka.script.poupload',
       url='http://eggserver.tcis.de/hoka.script.poupload',
       license='GPL version 2',
       packages=find_packages(),
-      namespace_packages=['hoka'],
+      namespace_packages=['hoka','hoka.script'],
       include_package_data=True,
       install_requires=[
         'setuptools',
         'z3c.autoinclude',
+        'polib',
       ],
       extras_require={'test': [
         'collective.testcaselayer',
